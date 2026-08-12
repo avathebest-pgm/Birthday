@@ -1,0 +1,1105 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+}
+
+
+body {
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd6e7,
+            #fce1ff,
+            #dcd6ff
+        );
+
+    color: #6b4b5a;
+
+}
+
+
+/* =========================
+   OPENING PAGE
+========================= */
+
+.birthday-card {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd6e7,
+            #fce1ff,
+            #dcd6ff
+        );
+
+    z-index: 100;
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+
+}
+
+
+.birthday-card.hide {
+
+    opacity: 0;
+
+    transform:
+        scale(0.8);
+
+    pointer-events: none;
+
+}
+
+
+/* =========================
+   CAKE
+========================= */
+
+.cake {
+
+    font-size:
+        clamp(
+            60px,
+            15vw,
+            100px
+        );
+
+    margin-bottom: 10px;
+
+    animation:
+        cakeBounce
+        2s
+        infinite
+        ease-in-out;
+
+}
+
+
+@keyframes cakeBounce {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-12px);
+
+    }
+
+}
+
+
+/* =========================
+   OPENING TEXT
+========================= */
+
+.small-text {
+
+    color: #9b6b87;
+
+    font-size:
+        clamp(
+            12px,
+            3vw,
+            15px
+        );
+
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.birthday-card h1 {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            40px,
+            10vw,
+            70px
+        );
+
+    line-height: 1.1;
+
+    color: #8e5277;
+
+    margin-bottom: 18px;
+
+}
+
+
+.message {
+
+    color: #765d6d;
+
+    font-size:
+        clamp(
+            14px,
+            3.5vw,
+            18px
+        );
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =========================
+   MAIN BUTTON
+========================= */
+
+button {
+
+    border: none;
+
+    outline: none;
+
+    cursor: pointer;
+
+    font-family:
+        inherit;
+
+    -webkit-tap-highlight-color:
+        transparent;
+
+    touch-action:
+        manipulation;
+
+}
+
+
+.main-button {
+
+    min-height: 52px;
+
+    padding:
+        14px 28px;
+
+    width:
+        min(
+            90vw,
+            300px
+        );
+
+    border-radius:
+        999px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #df83ad,
+            #c96292
+        );
+
+    color: white;
+
+    font-size:
+        clamp(
+            13px,
+            3vw,
+            16px
+        );
+
+    font-weight: 700;
+
+    box-shadow:
+        0 10px 25px
+        rgba(
+            217,
+            130,
+            170,
+            0.35
+        );
+
+}
+
+
+.main-button:active {
+
+    transform:
+        scale(0.94);
+
+}
+
+
+/* =========================
+   BIRTHDAY CONTENT
+========================= */
+
+#birthday-content {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100vh;
+    height: 100dvh;
+
+    display: none;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff3f8,
+            #f9edff,
+            #eeeaff
+        );
+
+}
+
+
+#birthday-content.show {
+
+    display: block;
+
+}
+
+
+.content {
+
+    width: 100%;
+
+    height: 100%;
+
+    padding: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.sparkle-title {
+
+    color: #d783a8;
+
+    font-size:
+        clamp(
+            16px,
+            4vw,
+            25px
+        );
+
+    letter-spacing:
+        clamp(
+            5px,
+            2vw,
+            12px
+        );
+
+    margin-bottom:
+        clamp(
+            5px,
+            1.5vh,
+            15px
+        );
+
+    animation:
+        sparkleTitle
+        2s
+        infinite;
+
+}
+
+
+@keyframes sparkleTitle {
+
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+}
+
+
+#birthday-content h1 {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            25px,
+            7vw,
+            48px
+        );
+
+    line-height: 1.15;
+
+    color: #8e5277;
+
+    margin-bottom: 5px;
+
+}
+
+
+#birthday-content h1 span {
+
+    display: block;
+
+    color: #d05d8b;
+
+}
+
+
+.today-text {
+
+    color: #a46f87;
+
+    font-size:
+        clamp(
+            12px,
+            3vw,
+            16px
+        );
+
+    margin-bottom:
+        clamp(
+            8px,
+            1.5vh,
+            15px
+        );
+
+}
+
+
+/* =========================
+   PHOTO
+========================= */
+
+.photo-box {
+
+    width:
+        min(
+            55vw,
+            230px
+        );
+
+    height:
+        min(
+            34vh,
+            260px
+        );
+
+    padding: 7px;
+
+    background: white;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 12px 30px
+        rgba(
+            100,
+            70,
+            100,
+            0.18
+        );
+
+    transform:
+        rotate(-2deg);
+
+    overflow: hidden;
+
+    cursor: zoom-in;
+
+    transition:
+        transform 0.2s ease;
+
+}
+
+
+.photo-box:active {
+
+    transform:
+        rotate(-2deg)
+        scale(0.96);
+
+}
+
+
+.photo-box img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+}
+
+
+/* =========================
+   LOVE TEXT
+========================= */
+
+.love-text {
+
+    width:
+        min(
+            90vw,
+            550px
+        );
+
+    color: #6b4b5a;
+
+    font-size:
+        clamp(
+            12px,
+            3vw,
+            16px
+        );
+
+    line-height: 1.45;
+
+    margin:
+        clamp(
+            8px,
+            1.5vh,
+            18px
+        ) 0;
+
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    width: 100%;
+
+}
+
+
+.buttons button {
+
+    min-height: 40px;
+
+    padding: 9px 16px;
+
+    border-radius: 999px;
+
+    color: white;
+
+    font-size:
+        clamp(
+            11px,
+            2.8vw,
+            14px
+        );
+
+    font-weight: 700;
+
+}
+
+
+#music-button {
+
+    background:
+        linear-gradient(
+            135deg,
+            #c47db5,
+            #a967a5
+        );
+
+}
+
+
+#wish-button {
+
+    background:
+        linear-gradient(
+            135deg,
+            #b875c9,
+            #8e63bd
+        );
+
+}
+
+
+.buttons button:active {
+
+    transform:
+        scale(0.93);
+
+}
+
+
+/* =========================
+   WISH
+========================= */
+
+#wish-message {
+
+    min-height: 20px;
+
+    margin-top: 7px;
+
+    color: #9b5b87;
+
+    font-size:
+        clamp(
+            11px,
+            2.8vw,
+            15px
+        );
+
+    font-weight: 700;
+
+    opacity: 0;
+
+    transform:
+        scale(0.7);
+
+    transition:
+        0.5s ease;
+
+}
+
+
+#wish-message.show {
+
+    opacity: 1;
+
+    transform:
+        scale(1);
+
+}
+
+
+/* =========================
+   FINAL MESSAGE
+========================= */
+
+.final-message {
+
+    margin-top:
+        clamp(
+            5px,
+            1vh,
+            12px
+        );
+
+    color: #a0527a;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(
+            13px,
+            3vw,
+            18px
+        );
+
+}
+
+
+.final-message span {
+
+    font-size:
+        clamp(
+            18px,
+            4vw,
+            25px
+        );
+
+}
+
+
+.final-message p {
+
+    margin-top: 3px;
+
+}
+
+
+/* =========================
+   EFFECT CONTAINER
+========================= */
+
+#effects {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 9999;
+
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti {
+
+    position: absolute;
+
+    top: -20px;
+
+    width: 8px;
+
+    height: 14px;
+
+    opacity: 1;
+
+    animation:
+        confettiFall
+        linear
+        forwards;
+
+}
+
+
+@keyframes confettiFall {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =========================
+   FALLING HEARTS
+========================= */
+
+.heart {
+
+    position: absolute;
+
+    top: -40px;
+
+    font-size: 22px;
+
+    animation:
+        heartFall
+        linear
+        forwards;
+
+}
+
+
+@keyframes heartFall {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0);
+
+        opacity: 0;
+
+    }
+
+    15% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =========================
+   SPARKLES
+========================= */
+
+.sparkle {
+
+    position: absolute;
+
+    font-size: 22px;
+
+    animation:
+        sparklePop
+        1.5s
+        ease-out
+        forwards;
+
+}
+
+
+@keyframes sparklePop {
+
+    0% {
+
+        transform:
+            scale(0)
+            rotate(0);
+
+        opacity: 0;
+
+    }
+
+    30% {
+
+        transform:
+            scale(1.4)
+            rotate(90deg);
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform:
+            scale(0.3)
+            rotate(180deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =========================
+   PHOTO ZOOM
+========================= */
+
+#photo-zoom {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background:
+        rgba(
+            30,
+            15,
+            30,
+            0.86
+        );
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 20000;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+
+    backdrop-filter:
+        blur(8px);
+
+    -webkit-backdrop-filter:
+        blur(8px);
+
+}
+
+
+#photo-zoom.show {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+
+}
+
+
+#zoomed-image {
+
+    width:
+        min(
+            90vw,
+            600px
+        );
+
+    max-height: 78vh;
+
+    object-fit: contain;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(
+            0,
+            0,
+            0,
+            0.4
+        );
+
+    transform:
+        scale(0.7);
+
+    transition:
+        transform 0.35s
+        cubic-bezier(
+            0.175,
+            0.885,
+            0.32,
+            1.275
+        );
+
+}
+
+
+#photo-zoom.show #zoomed-image {
+
+    transform:
+        scale(1);
+
+}
+
+
+#photo-zoom p {
+
+    margin-top: 18px;
+
+    color: white;
+
+    font-size: 12px;
+
+    opacity: 0.75;
+
+}
+
+
+/* =========================
+   SMALL PHONE
+========================= */
+
+@media (max-width: 380px) {
+
+    .content {
+
+        padding: 10px;
+
+    }
+
+
+    .photo-box {
+
+        width: 48vw;
+
+        height: 27vh;
+
+    }
+
+
+    .love-text {
+
+        margin: 6px 0;
+
+        line-height: 1.3;
+
+    }
+
+
+    .buttons button {
+
+        padding:
+            8px 12px;
+
+    }
+
+}
+
+
+/* =========================
+   LANDSCAPE PHONE
+========================= */
+
+@media (
+    max-height: 500px
+) and (
+    orientation: landscape
+) {
+
+    .content {
+
+        padding: 5px;
+
+    }
+
+
+    .sparkle-title {
+
+        display: none;
+
+    }
+
+
+    #birthday-content h1 {
+
+        font-size: 22px;
+
+    }
+
+
+    .photo-box {
+
+        width: 100px;
+
+        height: 120px;
+
+    }
+
+
+    .love-text {
+
+        margin: 5px;
+
+        font-size: 11px;
+
+    }
+
+
+    .final-message {
+
+        display: none;
+
+    }
+
+}

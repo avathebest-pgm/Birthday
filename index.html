@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width,
+        initial-scale=1.0,
+        maximum-scale=1.0,
+        user-scalable=no"
+    >
+
+    <title>Birthday 🎂</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         EFFECTS
+    ========================== -->
+
+    <div id="effects"></div>
+
+
+    <!-- =========================
+         OPENING PAGE
+    ========================== -->
+
+    <section
+        id="opening"
+        class="birthday-card"
+    >
+
+        <div class="cake">
+            🎂
+        </div>
+
+
+        <p class="small-text">
+            A little surprise for you...
+        </p>
+
+
+        <h1>
+            Happy Birthday!
+        </h1>
+
+
+        <p class="message">
+
+            Today is your special day ✨
+
+            <br>
+
+            So, I made something
+            just for you. 💗
+
+        </p>
+
+
+        <button
+            class="main-button"
+            onclick="openGift()"
+        >
+            Open Your Birthday Gift 🎁
+        </button>
+
+    </section>
+
+
+
+    <!-- =========================
+         BIRTHDAY CONTENT
+    ========================== -->
+
+    <main id="birthday-content">
+
+        <div class="content">
+
+
+            <div class="sparkle-title">
+                ✦ ✧ ✦ ✧ ✦
+            </div>
+
+
+            <h1>
+
+                🎂 Happy Birthday,
+
+                <span>
+                    Ma Ei! 🥳
+                </span>
+
+            </h1>
+
+
+            <p class="today-text">
+                Today is all about you ✨
+            </p>
+
+
+            <!-- =========================
+                 PHOTO
+            ========================== -->
+
+            <div
+                class="photo-box"
+                onclick="zoomPhoto()"
+            >
+
+                <img
+                    src="img/img1.jpg"
+                    alt="Ma Ei"
+                >
+
+            </div>
+
+
+            <p class="love-text">
+
+                Wishing you lots of happiness,
+                love and beautiful moments. 💕
+
+                <br>
+
+                May all your little dreams
+                come true. 🌷
+
+            </p>
+
+
+            <!-- =========================
+                 BUTTONS
+            ========================== -->
+
+            <div class="buttons">
+
+
+                <button
+                    id="music-button"
+                    onclick="toggleMusic()"
+                >
+                    🎵 Pause Music
+                </button>
+
+
+                <button
+                    id="wish-button"
+                    onclick="makeWish()"
+                >
+                    ✨ Make a Wish
+                </button>
+
+
+            </div>
+
+
+            <p
+                id="wish-message"
+            ></p>
+
+
+            <div class="final-message">
+
+                <span>
+                    💗
+                </span>
+
+                <p>
+                    You deserve
+                    all the happiness. ✨
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================
+         PHOTO ZOOM
+    ========================== -->
+
+    <div
+        id="photo-zoom"
+        onclick="closePhoto()"
+    >
+
+        <img
+            id="zoomed-image"
+            src="img/img1.jpg"
+            alt="Zoomed photo"
+        >
+
+        <p>
+            Tap anywhere to close ✕
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================
+         MUSIC
+    ========================== -->
+
+    <audio
+        id="birthday-music"
+        loop
+    >
+
+        <source
+            src="music/music1.mp3"
+            type="audio/mpeg"
+        >
+
+    </audio>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
